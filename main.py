@@ -46,7 +46,19 @@ def get_todos():
     return todos
 
 
-# 4. GET - Get Todo by ID
+# 4. GET - Filter Todos using Query Parameter
+@app.get("/todos/search", response_model=list[TodoResponse])
+def search_todos(completed: bool | None = None):
+    if completed is None:
+        return todos
+
+    return [
+        todo for todo in todos
+        if todo["completed"] == completed
+    ]
+
+
+# 5. GET - Get Todo by ID
 @app.get("/todos/{todo_id}", response_model=TodoResponse)
 def get_todo(todo_id: int):
     for todo in todos:
@@ -56,7 +68,7 @@ def get_todo(todo_id: int):
     raise HTTPException(status_code=404, detail="Todo not found")
 
 
-# 5. PUT - Update Todo
+# 6. PUT - Update Todo
 @app.put("/todos/{todo_id}", response_model=TodoResponse)
 def update_todo(todo_id: int, todo: TodoCreate):
     for item in todos:
@@ -68,7 +80,7 @@ def update_todo(todo_id: int, todo: TodoCreate):
     raise HTTPException(status_code=404, detail="Todo not found")
 
 
-# 6. PATCH - Partially Update Todo
+# 7. PATCH - Partially Update Todo
 @app.patch("/todos/{todo_id}", response_model=TodoResponse)
 def partial_update_todo(todo_id: int, todo: TodoCreate):
     for item in todos:
@@ -80,7 +92,7 @@ def partial_update_todo(todo_id: int, todo: TodoCreate):
     raise HTTPException(status_code=404, detail="Todo not found")
 
 
-# 7. DELETE - Delete Todo
+# 8. DELETE - Delete Todo
 @app.delete("/todos/{todo_id}")
 def delete_todo(todo_id: int):
     for index, todo in enumerate(todos):
@@ -92,3 +104,11 @@ def delete_todo(todo_id: int):
             }
 
     raise HTTPException(status_code=404, detail="Todo not found")
+
+# 9. GET - Async Todo Endpoint
+@app.get("/async-todos")
+async def get_todos_async():
+    return {
+        "message": "Async endpoint is working",
+        "todos": todos
+    }
