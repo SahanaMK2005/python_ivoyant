@@ -12,7 +12,7 @@ print(text)
 print("\nToken IDs:")
 print(tokens)
 
-print("\nTotal Number of Tokens:")
+print("\nTotal Number of Tokens Updated:")
 print(len(tokens))
 
 print("\nIndividual Tokens:")
