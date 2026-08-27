@@ -1,6 +1,6 @@
 import tiktoken
 
-text = "what are you doing."
+text = "What are you doing? I am learning Python and Large Language Models."
 
 encoding = tiktoken.get_encoding("cl100k_base")
 
@@ -18,4 +18,5 @@ print(len(tokens))
 print("\nIndividual Tokens:")
 
 for token in tokens:
-    print(token, "->", repr(encoding.decode([token])))
+    decoded_token = encoding.decode([token])
+    print(token, "->", repr(decoded_token))
