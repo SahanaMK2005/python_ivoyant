@@ -1,0 +1,4 @@
+from app.scheduler_service import sync_knowledge_to_vector_db
+
+
+sync_knowledge_to_vector_db()
