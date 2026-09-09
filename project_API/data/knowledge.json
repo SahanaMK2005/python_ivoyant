@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "category": "Refund Policy",
+        "content": "Refunds are processed within 2 to 5 business days after the refund request is approved. The refund amount will be credited to the original payment method used for the purchase. Processing time may vary depending on the customer's bank or payment provider."
+    },
+    {
+        "id": 2,
+        "category": "Updated Return Policy",
+        "content": "Products can be returned within 20 days of delivery. To be eligible for a return, the product should be in good condition and include the original packaging. Once the returned product is received and verified, the return request will be processed."
+    },
+    {
+        "id": 3,
+        "category": "Shipping Policy",
+        "content": "Orders are usually delivered within 7 to 10 business days after the order is confirmed. Delivery time may vary depending on the customer's location and product availability. Customers will receive shipping and tracking information once the order has been dispatched."
+    },
+    {
+        "id": 4,
+        "category": "Payment Policy",
+        "content": "We accept credit cards, debit cards, UPI, and net banking as payment methods. Customers should ensure that the payment information entered during checkout is correct. If a payment fails, customers can try another available payment method or contact their bank for assistance."
+    },
+    {
+        "id": 5,
+        "category": "Order Tracking",
+        "content": "Customers can track their order using the tracking link sent after shipment. The tracking information shows the current status and progress of the delivery. Tracking details may take some time to become available after the order has been dispatched."
+    },
+    {
+        "id": 6,
+        "category": "Cancellation Policy",
+        "content": "Orders can be cancelled before they are shipped. Once an order has been dispatched, it may no longer be eligible for cancellation. Customers can contact customer support if they need assistance with cancelling an order."
+    }
+]

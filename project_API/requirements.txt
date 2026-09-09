@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+streamlit
+requests
+chromadb
+sentence-transformers
+langchain
+langchain-google-genai
+google-generativeai
+apscheduler
